@@ -12,7 +12,7 @@ db.open(function(err, db) {
         console.log("Connected to 'test' database");
         db.collection('timons', {strict:true}, function(err, collection) {
             if (err) {
-                console.log("The 'timons' collection doesn't exist. Creating it with sample data...");
+                console.log("The collection doesn't exist. Creating it with sample data...");
             }
         });
     }
@@ -20,9 +20,10 @@ db.open(function(err, db) {
  
 
 exports.findById = function(req, res) {
+	var coll = req.params.collection;
     var id = req.params.id;
-    console.log('Retrieving timon: ' + id);
-    db.collection('timons', function(err, collection) {
+    console.log('Retrieving document: ' + id);
+    db.collection(coll, function(err, collection) {
         collection.findOne({'_id':new BSON.ObjectID(id)}, function(err, item) {
             res.send(item);
         });
@@ -31,8 +32,9 @@ exports.findById = function(req, res) {
  
 
 exports.findAll = function(req, res) {
-	console.log('Retrieving timons...');
-    db.collection('timons', function(err, collection) {
+	var coll = req.params.collection;
+	console.log('Retrieving documents...');
+    db.collection(coll, function(err, collection) {
         collection.find().toArray(function(err, items) {
             res.send(items);
         });
@@ -41,10 +43,11 @@ exports.findAll = function(req, res) {
  
 
 exports.addTimon = function(req, res) {
-    var timon = req.body;
-    console.log('Adding timon: ' + JSON.stringify(timon));
-    db.collection('timons', function(err, collection) {
-        collection.insert(timon, {safe:true}, function(err, result) {
+	var coll = req.params.collection;
+    var doc = req.body;
+    console.log('Adding document: ' + JSON.stringify(timon));
+    db.collection(coll, function(err, collection) {
+        collection.insert( doc, {safe:true}, function(err, result) {
             if (err) {
                 res.send({'error':'An error has occurred'});
             } else {
@@ -56,27 +59,31 @@ exports.addTimon = function(req, res) {
 }
  
 exports.updateTimon = function(req, res) {
+	var coll = req.params.collection;
     var id = req.params.id;
-    var timon = req.body;
-    console.log('Updating timon: ' + id);
-    console.log(JSON.stringify(timon));
-    db.collection('timons', function(err, collection) {
-        collection.update({'_id':new BSON.ObjectID(id)}, timon, {safe:true}, function(err, result) {
+    var doc = req.body;
+    
+	console.log('Updating document: ' + id);
+    console.log(JSON.stringify(doc));
+	
+    db.collection(coll, function(err, collection) {
+        collection.update({'_id':new BSON.ObjectID(id)}, doc, {safe:true}, function(err, result) {
             if (err) {
                 console.log('Error updating timon: ' + err);
                 res.send({'error':'An error has occurred'});
             } else {
                 console.log('' + result + ' document(s) updated');
-                res.send(timon);
+                res.send(doc);
             }
         });
     });
 }
  
 exports.deleteTimon = function(req, res) {
+	var coll = req.params.collection;
     var id = req.params.id;
-    console.log('Deleting timon: ' + id);
-    db.collection('timons', function(err, collection) {
+    console.log('Deleting document: ' + id);
+    db.collection(coll, function(err, collection) {
         collection.remove({'_id':new BSON.ObjectID(id)}, {safe:true}, function(err, result) {
             if (err) {
                 res.send({'error':'An error has occurred - ' + err});

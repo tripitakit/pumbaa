@@ -8,11 +8,11 @@ app.configure(function () {
     app.use(express.bodyParser());
 });
  
-app.get('/timons', timons.findAll);
-app.get('/timons/:id', timons.findById);
-app.post('/timons', timons.addTimon);
-app.put('/timons/:id', timons.updateTimon);
-app.delete('/timons/:id', timons.deleteTimon);
+app.get('/:collection', timons.findAll);
+app.get('/:collection/:id', timons.findById);
+app.post('/:collection', timons.addTimon);
+app.put('/:collection/:id', timons.updateTimon);
+app.delete('/:collection/:id', timons.deleteTimon);
  
 app.listen(3000);
 console.log('Listening on port 3000...');
