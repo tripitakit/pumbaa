@@ -18,6 +18,7 @@ db.open(function(err, db) {
     }
 });
  
+
 exports.findById = function(req, res) {
     var id = req.params.id;
     console.log('Retrieving timon: ' + id);
@@ -28,6 +29,7 @@ exports.findById = function(req, res) {
     });
 };
  
+
 exports.findAll = function(req, res) {
 	console.log('Retrieving timons...');
     db.collection('timons', function(err, collection) {
@@ -37,6 +39,7 @@ exports.findAll = function(req, res) {
     });
 };
  
+
 exports.addTimon = function(req, res) {
     var timon = req.body;
     console.log('Adding timon: ' + JSON.stringify(timon));
