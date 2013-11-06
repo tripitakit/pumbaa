@@ -39,7 +39,7 @@ exports.findAll = function(req, res) {
  
 exports.addTimon = function(req, res) {
     var timon = req.body;
-    console.log('Adding timon: ' + JSON.stringify(wine));
+    console.log('Adding timon: ' + JSON.stringify(timon));
     db.collection('timons', function(err, collection) {
         collection.insert(timon, {safe:true}, function(err, result) {
             if (err) {

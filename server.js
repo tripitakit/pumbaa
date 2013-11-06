@@ -4,7 +4,7 @@ var express = require('express'),
 var app = express();
  
 app.configure(function () {
-    app.use(express.logger('dev')); /* 'default', 'short', 'tiny', 'dev' */
+    app.use(express.logger('dev'));
     app.use(express.bodyParser());
 });
  
