@@ -56,7 +56,7 @@ exports.updateTimon = function(req, res) {
     var id = req.params.id;
     var timon = req.body;
     console.log('Updating timon: ' + id);
-    console.log(JSON.stringify(wine));
+    console.log(JSON.stringify(timon));
     db.collection('timons', function(err, collection) {
         collection.update({'_id':new BSON.ObjectID(id)}, timon, {safe:true}, function(err, result) {
             if (err) {
