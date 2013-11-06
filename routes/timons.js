@@ -8,19 +8,25 @@ var server = new Server('localhost', 27017, {auto_reconnect: true});
 db = new Db('test', server);
  
 db.open(function(err, db) {
-    if(!err) {
+    if (!err) {
         console.log("Connected to 'test' database");
-        db.collection('timons', {strict:true}, function(err, collection) {
-            if (err) {
-                console.log("The collection doesn't exist. Creating it with sample data...");
-            }
-        });
+    } else {
+    	throw(err);
     }
 });
+ 
+var existsOrCreate = function(coll){
+	db.collection(coll, {strict:true}, function(err, collection) {
+	    if (err) {
+	        console.log("!The collection doesn't exist.");
+		}
+	});
+} 
  
 
 exports.findById = function(req, res) {
 	var coll = req.params.collection;
+	
     var id = req.params.id;
     console.log('Retrieving document: ' + id);
     db.collection(coll, function(err, collection) {
@@ -45,7 +51,7 @@ exports.findAll = function(req, res) {
 exports.addTimon = function(req, res) {
 	var coll = req.params.collection;
     var doc = req.body;
-    console.log('Adding document: ' + JSON.stringify(timon));
+    console.log('Adding document: ' + JSON.stringify(doc));
     db.collection(coll, function(err, collection) {
         collection.insert( doc, {safe:true}, function(err, result) {
             if (err) {
@@ -69,7 +75,7 @@ exports.updateTimon = function(req, res) {
     db.collection(coll, function(err, collection) {
         collection.update({'_id':new BSON.ObjectID(id)}, doc, {safe:true}, function(err, result) {
             if (err) {
-                console.log('Error updating timon: ' + err);
+                console.log('Error updating document: ' + err);
                 res.send({'error':'An error has occurred'});
             } else {
                 console.log('' + result + ' document(s) updated');
