@@ -38,10 +38,10 @@ exports.findAll = function(req, res) {
 };
  
 exports.addTimon = function(req, res) {
-    var wine = req.body;
+    var timon = req.body;
     console.log('Adding timon: ' + JSON.stringify(wine));
     db.collection('timons', function(err, collection) {
-        collection.insert(wine, {safe:true}, function(err, result) {
+        collection.insert(timon, {safe:true}, function(err, result) {
             if (err) {
                 res.send({'error':'An error has occurred'});
             } else {
