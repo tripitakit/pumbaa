@@ -11,9 +11,10 @@ The Appcelerator Titanium Alloy client app project is [timon](https://github.com
 
 ---
 
-##Requirements##
-- node.js
-- mongoDB
+##Dependencies##
+A working environment for
+- Node.js
+- MongoDB 
 
 ##Install##
 Clone repository, cd into it and install dependencies
