@@ -5,7 +5,7 @@ Pumbaa
 
 
 A test-study for self-hosted MongoDB Node.js (express) server application with a rest crud api
-for a cross-platform Appcelerator Titanium Alloy mobile-client app.
+for a cross-platform Appcelerator Titanium Alloy mobile-client app (timon).
 
 The Appcelerator Titanium Alloy client app project is [timon](https://github.com/tripitakit/timon).
 
