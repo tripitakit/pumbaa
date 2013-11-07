@@ -25,7 +25,7 @@ $ npm install
 ~~~
 
 ##Usage##
-Start the server with the commands
+Start the server with the command
 ~~~
 $ node server.js
 ~~~
