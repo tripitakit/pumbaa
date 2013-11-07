@@ -1,4 +1,4 @@
-timon-server
+Pumbaa
 ===
 
 ![alt tag](http://www.nationalgeographic.it/images/2010/03/22/131940827-media-409e5990-3b7a-4859-b262-b7ec7f86f724.jpg)
@@ -19,7 +19,7 @@ A working environment for
 ##Install##
 Clone repository, cd into it and install dependencies
 ~~~
-$ git clone https://github.com/tripitakit/timon-server.git
+$ git clone https://github.com/tripitakit/pumbaa.git
 $ cd timon-server
 $ npm install
 ~~~
