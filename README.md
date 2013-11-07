@@ -6,4 +6,4 @@ timon-server
 
 A test-study for a MongoDB Node.js (express) server app with REST CRUD API for a Titanium Alloy client app.
 
-Appcelerator Titanium Alloy client app repo: [timon](https://github.com/tripitakit/timon)
+The Appcelerator Titanium Alloy client app project is [timon](https://github.com/tripitakit/timon).
