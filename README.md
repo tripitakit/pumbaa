@@ -15,10 +15,17 @@ The Appcelerator Titanium Alloy client app project is [timon](https://github.com
 - node.js
 - mongoDB
 
+##Install##
+Clone repository and install dependencies first
+~~~
+$ git clone 
+$ cd timon-server
+$ npm install
+~~~
 
 ##Usage##
 
-It the cloned repository folder, launch the server with the command
+Start the server with the commands
 ~~~
 $ node server.js
 ~~~
