@@ -8,3 +8,17 @@ A test-study for self-hosted MongoDB Node.js (express) server application with a
 for a cross-platform Appcelerator Titanium Alloy mobile-client app.
 
 The Appcelerator Titanium Alloy client app project is [timon](https://github.com/tripitakit/timon).
+
+
+##Requirements##
+
+- node.js
+- mongoDB
+
+
+##Usage##
+
+It the cloned repository folder, launch the server with the command
+~~~
+$ node server.js
+~~~
