@@ -9,22 +9,21 @@ for a cross-platform Appcelerator Titanium Alloy mobile-client app.
 
 The Appcelerator Titanium Alloy client app project is [timon](https://github.com/tripitakit/timon).
 
+---
 
 ##Requirements##
-
 - node.js
 - mongoDB
 
 ##Install##
-Clone repository and install dependencies first
+Clone repository, cd into it and install dependencies
 ~~~
-$ git clone 
+$ git clone https://github.com/tripitakit/timon-server.git
 $ cd timon-server
 $ npm install
 ~~~
 
 ##Usage##
-
 Start the server with the commands
 ~~~
 $ node server.js
