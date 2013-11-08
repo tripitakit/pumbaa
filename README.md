@@ -20,7 +20,7 @@ A working environment for
 Clone repository, cd into it and install dependencies
 ~~~
 $ git clone https://github.com/tripitakit/pumbaa.git
-$ cd timon-server
+$ cd pumbaa
 $ npm install
 ~~~
 
