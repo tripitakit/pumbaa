@@ -30,14 +30,6 @@ Start the server with the command
 $ node server.js
 ~~~
 
-
-##Public pumbaa instance##
-A public pumbaa instance is running at http://pumbaa.iosvappo.it.
-
-No web interface is present. Use a web browser to test the api with the collection 'docs';
-
-i.e. make a get request at the url http://pumbaa.iosvappo.it/docs to show all the documents in it.
-
 GET:
 - /:collection			: find all documents of collection docs
 - /:collection/:id		: find one by :id
@@ -50,3 +42,12 @@ PUT
 
 DELETE
 - /:collection/:id		: delete the document identified by :id
+
+
+##Public pumbaa instance##
+A public pumbaa instance is running at http://pumbaa.iosvappo.it.
+
+No web interface is present. Use a web browser to test the api with the collection 'docs';
+
+i.e. make a get request at the url http://pumbaa.iosvappo.it/docs to show all the documents in it.
+
