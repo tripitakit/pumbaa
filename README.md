@@ -4,7 +4,7 @@ Pumbaa
 ![alt tag](http://www.nationalgeographic.it/images/2010/03/22/131940827-media-409e5990-3b7a-4859-b262-b7ec7f86f724.jpg)
 
 
-Test-study project of a self-hosted (mongoDB + Node.js + Express) Server Application with a REST CRUD API,
+Test-study project of a self-hosted (mongoDB + node.js + express) Server Application with a RESTful CRUD API
 for an Appcelerator Titanium Alloy iPad client app (timon).
 
 The Appcelerator Titanium Alloy iPad client app is [timon](https://github.com/tripitakit/timon).
