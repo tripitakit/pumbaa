@@ -31,17 +31,17 @@ $ node server.js
 ~~~
 
 GET:
-- /:collection			: find all documents of collection docs
-- /:collection/:id		: find one by :id
+- /:collection			: find all documents of named collection
+- /:collection/:id		: find one by :id in the named collection
 
 POST 
-- /:collection			: insert a document to collection docs
+- /:collection			: insert a document in a named collection
 
 PUT
-- /:collection/:id		: update the document identified by :id
+- /:collection/:id		: update the document identified by :id in the named collection
 
 DELETE
-- /:collection/:id		: delete the document identified by :id
+- /:collection/:id		: delete the document identified by :id from the named collection
 
 
 ##Public pumbaa instance##
