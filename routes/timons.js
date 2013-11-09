@@ -15,14 +15,6 @@ db.open(function(err, db) {
     }
 });
  
-var existsOrCreate = function(coll){
-	db.collection(coll, {strict:true}, function(err, collection) {
-	    if (err) {
-	        console.log("!The collection doesn't exist.");
-		}
-	});
-} 
- 
 
 exports.findById = function(req, res) {
 	var coll = req.params.collection;
