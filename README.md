@@ -7,7 +7,7 @@ Pumbaa
 Test-study project of a self-hosted (mongoDB + node.js + express) Server Application with a RESTful CRUD API
 for an Appcelerator Titanium Alloy iPad client app (timon).
 
-The Appcelerator Titanium Alloy iPad client app is [timon](https://github.com/tripitakit/timon).
+The Appcelerator Titanium Alloy iPad client app is [timon](https://github.com/tripitakit/timon/wiki).
 
 ---
 
